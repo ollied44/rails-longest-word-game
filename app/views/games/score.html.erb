@@ -1,0 +1,17 @@
+<div class="container mt-5 text-center">
+  <h1 class="mb-4 fw-bold">Result</h1>
+
+  <div class="mb-4" style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <% @letters.each do |letter| %>
+    <div class="letter-tile"><%= letter %></div>
+  <% end %>
+</div>
+
+  <p class="fs-5"><strong>Your word:</strong> <%= @word %></p>
+  <p class="fs-5"><strong>Score:</strong> <%= @score %></p>
+  <p class="fs-5"><%= @message %></p>
+
+  <form action="<%= new_path %>" method="get">
+  <button type="submit" class="btn btn-outline-primary">Play Again</button>
+</form>
+</div>
